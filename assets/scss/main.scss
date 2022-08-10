@@ -33,42 +33,47 @@ body {
 
 .pStyle {
     color: #d5d4d4;
+    font-size: $fz;
 }
 
-
-header {
+// header Page 1    
+.hero {
     color: $primarywhite-color;
     padding-top: 45px;
     width: 90vw;
-    margin: 0 auto;
+    height: 150vh;
+    margin: auto;
 
+    h1 {
+        font-size: 6rem;
+        text-align: center;
+        font-family: $import-font;
+    }
+
+    h2 {
+        @extend h1;
+        line-height: 29px;
+        padding-bottom: 35px;
+        color: $primaryblack-color;
+        -webkit-text-stroke: 1px $element-color;
+    }
 
     p {
         &:nth-of-type(1) {
             @extend .pStyle;
             text-align: center;
-            padding-bottom: 12px;
+            padding-bottom: 5px;
         }
-    }
 
-
-    h1 {
-        font-size: 4rem;
-        text-align: center;
-        font-family: $import-font;
-    }
-
-
-    h2 {
-        @extend h1;
-        line-height: 20px;
-        padding-bottom: 25px;
-    }
-
-
-    p {
         &:nth-of-type(2) {
             @extend :nth-of-type(1);
+        }
+
+        &:nth-of-type(3) {
+            font-size: 6.5rem;
+            font-family: $import-font;
+            text-align: left;
+            width: 60vw;
         }
     }
 }
@@ -77,11 +82,71 @@ header {
 .logoButtonContainer {
     display: flex;
     justify-content: space-between;
+    margin-top: 30vh;
+    padding-bottom: 190px;
 
     input {
         padding: 15px 40px;
         @extend .pStyle;
-        border: solid 2px #d5d4d45c;
+        border: solid 2px #d5d4d4b1;
         background-color: $primaryblack-color;
+
+        &:hover {
+            opacity: 0.9;
+            color: $primaryblack-color;
+            background-color: $primarywhite-color;
+            transition: 0.8s;
+        }
     }
 }
+
+.imgMapContainer {
+
+    height: 800px;
+    width: 500px;
+
+    img {
+        height: 700px;
+    }
+}
+
+.inhalt {
+    padding: 600px 0 0 5%;
+
+    img {
+        height: 800px;
+        width: 500px;
+    }
+
+    p {
+
+        &:nth-of-type(even) {
+            color: $primarywhite-color;
+            font-size: 6.5rem;
+            padding-bottom: 12px;
+            font-family: $import-font;
+
+        }
+
+        &:nth-of-type(odd) {
+            color: $primarywhite-color;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+.inhaltFlex {
+    display: flex;
+}
+
+/* p {
+        &:nth-child(odd) {
+            @extend .pStyle;
+        }
+
+        &:nth-child(even) {
+            @extend :nth-of-type(3);
+        }
+    } */
+
+// Page 2
